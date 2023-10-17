@@ -1,0 +1,25 @@
+- name: Create Traefik folder for certs
+  ansible.builtin.file:
+    path: /etc/traefik/certs
+    state: directory
+
+- name: Use Traefik config presets
+  ansible.builtin.template:
+    src: templates/traefik.yml.j2
+    dest: /etc/traefik/traefik.yml
+
+- name: Run Traefik Container
+  docker_container:
+    name: traefik
+    image: traefik:v2.5
+    state: started   
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080" 
+    volumes:
+      - "/etc/traefik:/etc/traefik"
+      - "traefik-ssl-certs:/ssl-certs"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - name: traefik_network 

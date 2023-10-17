@@ -1,0 +1,14 @@
+- name: Deploy dummy app
+  docker_container:
+    name: dummy_app
+    image: merdenal/autospa:amd
+    state: started   
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.index.entrypoints: "web, websecure"
+      traefik.http.routers.index.rule: "Host(`dummy.kiraservice.com`)"
+      traefik.http.routers.index.tls: "true"
+      traefik.http.routers.index.tls.certresolver: "production"
+      traefik.http.services.index.loadbalancer.server.port: "3000"
+    networks:
+      - name: traefik_network 

@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  roles:
+    - configure-system
+    - install-configure-portainer
+  vars:
+    portainer_password: ilikeorangesverymuch123
+    user_email: matthew@gmail.com
+    deploy_dummy: true

@@ -1,0 +1,856 @@
+2023-10-17 11:19:35,907 p=18789 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 11:19:35,907 p=18789 u=matthew n=ansible | 192.168.56.10 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/libexec/platform-python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-17 11:48:01,179 p=20551 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 11:48:01,185 p=20551 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 11:48:02,982 p=20551 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 11:48:02,982 p=20551 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:48:02,997 p=20551 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 11:51:11,127 p=20551 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 11:51:11,134 p=20551 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 11:51:14,286 p=20551 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 11:51:14,290 p=20551 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 11:51:14,645 p=20551 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "Parameter 'description' is required."}
+2023-10-17 11:51:14,646 p=20551 u=matthew n=ansible | PLAY RECAP ********************************************************************************************
+2023-10-17 11:51:14,646 p=20551 u=matthew n=ansible | 192.168.56.10              : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 11:51:40,658 p=20815 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 11:51:40,666 p=20815 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 11:51:41,775 p=20815 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 11:51:41,775 p=20815 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:51:41,786 p=20815 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 11:51:43,866 p=20815 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:51:43,875 p=20815 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 11:51:45,816 p=20815 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:51:45,820 p=20815 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 11:51:46,173 p=20815 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 11:51:46,176 p=20815 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ***************************************************
+2023-10-17 11:51:47,537 p=20815 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'docker-ce': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+2023-10-17 11:51:47,538 p=20815 u=matthew n=ansible | PLAY RECAP ********************************************************************************************
+2023-10-17 11:51:47,538 p=20815 u=matthew n=ansible | 192.168.56.10              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 11:58:23,426 p=21520 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 11:58:23,433 p=21520 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 11:58:24,716 p=21520 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 11:58:24,716 p=21520 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:58:24,727 p=21520 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 11:58:26,857 p=21520 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:58:26,864 p=21520 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 11:58:28,832 p=21520 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 11:58:28,836 p=21520 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 11:58:29,180 p=21520 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 11:58:29,184 p=21520 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ***************************************************
+2023-10-17 11:58:30,916 p=21520 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "Failed to download metadata for repo 'docker-ce': Cannot download repomd.xml: Cannot download repodata/repomd.xml: All mirrors were tried", "rc": 1, "results": []}
+2023-10-17 11:58:30,917 p=21520 u=matthew n=ansible | PLAY RECAP ********************************************************************************************
+2023-10-17 11:58:30,917 p=21520 u=matthew n=ansible | 192.168.56.10              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 11:59:59,755 p=21776 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 11:59:59,761 p=21776 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 12:00:00,820 p=21776 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:00:00,820 p=21776 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:00:00,831 p=21776 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 12:00:02,937 p=21776 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:00:02,945 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 12:00:04,907 p=21776 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:00:04,912 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 12:00:06,802 p=21776 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:00:06,806 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ***************************************************
+2023-10-17 12:00:50,908 p=21776 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:00:50,912 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] *****************************************************
+2023-10-17 12:00:51,960 p=21776 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:00:51,963 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] **********************************************
+2023-10-17 12:00:52,310 p=21776 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:00:52,314 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] ***********************************************
+2023-10-17 12:00:52,734 p=21776 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:00:52,737 p=21776 u=matthew n=ansible | TASK [install-configure-portainer : Switch to docker group] *******************************************
+2023-10-17 12:04:10,536 p=21776 u=matthew n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-17 12:04:21,008 p=22015 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 12:04:21,014 p=22015 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 12:04:21,941 p=22015 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:04:21,941 p=22015 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:21,950 p=22015 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 12:04:24,118 p=22015 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:24,126 p=22015 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 12:04:26,099 p=22015 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:26,104 p=22015 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 12:04:27,188 p=22015 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:04:27,192 p=22015 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ***************************************************
+2023-10-17 12:04:29,301 p=22015 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:29,305 p=22015 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] *****************************************************
+2023-10-17 12:04:29,820 p=22015 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:29,824 p=22015 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] **********************************************
+2023-10-17 12:04:30,167 p=22015 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:30,171 p=22015 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] ***********************************************
+2023-10-17 12:04:30,580 p=22015 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:04:30,597 p=22015 u=matthew n=ansible | PLAY RECAP ********************************************************************************************
+2023-10-17 12:04:30,597 p=22015 u=matthew n=ansible | 192.168.56.10              : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:04:57,378 p=22173 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 12:04:57,384 p=22173 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 12:04:58,394 p=22173 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:04:58,394 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:04:58,405 p=22173 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 12:05:00,546 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:05:00,554 p=22173 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 12:05:02,527 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:05:02,532 p=22173 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 12:05:04,390 p=22173 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:05:04,394 p=22173 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ***************************************************
+2023-10-17 12:05:06,754 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:05:06,758 p=22173 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] *****************************************************
+2023-10-17 12:05:07,264 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:05:07,268 p=22173 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] **********************************************
+2023-10-17 12:05:07,599 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:05:07,602 p=22173 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] ***********************************************
+2023-10-17 12:05:07,981 p=22173 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:05:07,995 p=22173 u=matthew n=ansible | PLAY RECAP ********************************************************************************************
+2023-10-17 12:05:07,995 p=22173 u=matthew n=ansible | 192.168.56.10              : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:07:25,765 p=22500 u=matthew n=ansible | PLAY [all] ********************************************************************************************
+2023-10-17 12:07:25,772 p=22500 u=matthew n=ansible | TASK [Gathering Facts] ********************************************************************************
+2023-10-17 12:07:26,954 p=22500 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at
+/usr/libexec/platform-python, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:07:26,954 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:26,963 p=22500 u=matthew n=ansible | TASK [configure-system : Update all yum packages] *****************************************************
+2023-10-17 12:07:29,084 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:29,092 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *********************************
+2023-10-17 12:07:31,098 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:31,103 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *************************************
+2023-10-17 12:07:33,011 p=22500 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:07:33,016 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ***************************************************
+2023-10-17 12:07:35,347 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:35,351 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] *****************************************************
+2023-10-17 12:07:35,845 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:35,850 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] **********************************************
+2023-10-17 12:07:36,179 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:36,184 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] ***********************************************
+2023-10-17 12:07:36,568 p=22500 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:07:36,572 p=22500 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ******************************************
+2023-10-17 12:07:49,339 p=22500 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:07:49,369 p=22500 u=matthew n=ansible | PLAY RECAP ********************************************************************************************
+2023-10-17 12:07:49,369 p=22500 u=matthew n=ansible | 192.168.56.10              : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:15:03,213 p=23093 u=matthew n=ansible | PLAY [all] ******************************************************************************
+2023-10-17 12:15:03,220 p=23093 u=matthew n=ansible | TASK [Gathering Facts] ******************************************************************
+2023-10-17 12:15:04,566 p=23093 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python
+interpreter at /usr/libexec/platform-python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:15:04,566 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:04,578 p=23093 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***************************************
+2023-10-17 12:15:06,724 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:06,732 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *******************
+2023-10-17 12:15:08,703 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:08,707 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ***********************
+2023-10-17 12:15:10,431 p=23093 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:15:10,435 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *************************************
+2023-10-17 12:15:12,695 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:12,700 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***************************************
+2023-10-17 12:15:13,193 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:13,197 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ********************************
+2023-10-17 12:15:13,529 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:13,532 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *********************************
+2023-10-17 12:15:13,919 p=23093 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:15:13,923 p=23093 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ****************************
+2023-10-17 12:15:14,645 p=23093 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:15:14,661 p=23093 u=matthew n=ansible | PLAY RECAP ******************************************************************************
+2023-10-17 12:15:14,662 p=23093 u=matthew n=ansible | 192.168.56.10              : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:16:20,024 p=23394 u=matthew n=ansible | PLAY [all] ******************************************************************************
+2023-10-17 12:16:20,031 p=23394 u=matthew n=ansible | TASK [Gathering Facts] ******************************************************************
+2023-10-17 12:16:21,264 p=23394 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python
+interpreter at /usr/libexec/platform-python, but future installation of another Python
+interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:16:21,264 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:21,277 p=23394 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***************************************
+2023-10-17 12:16:23,432 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:23,441 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] *******************
+2023-10-17 12:16:25,437 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:25,441 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ***********************
+2023-10-17 12:16:26,073 p=23394 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:16:26,078 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *************************************
+2023-10-17 12:16:28,428 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:28,432 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***************************************
+2023-10-17 12:16:28,939 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:28,942 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ********************************
+2023-10-17 12:16:29,280 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:29,284 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *********************************
+2023-10-17 12:16:29,664 p=23394 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:16:29,667 p=23394 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ****************************
+2023-10-17 12:16:30,364 p=23394 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:16:30,378 p=23394 u=matthew n=ansible | PLAY RECAP ******************************************************************************
+2023-10-17 12:16:30,379 p=23394 u=matthew n=ansible | 192.168.56.10              : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:31:54,088 p=24737 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:31:54,095 p=24737 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:31:55,442 p=24737 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:31:55,442 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:31:55,453 p=24737 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:31:57,694 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:31:57,703 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ***************************************************************************************************************************
+2023-10-17 12:31:59,723 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:31:59,727 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *******************************************************************************************************************************
+2023-10-17 12:32:01,430 p=24737 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:32:01,434 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *********************************************************************************************************************************************
+2023-10-17 12:32:03,708 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:32:03,712 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***********************************************************************************************************************************************
+2023-10-17 12:32:04,217 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:32:04,221 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ****************************************************************************************************************************************
+2023-10-17 12:32:04,555 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:32:04,559 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *****************************************************************************************************************************************
+2023-10-17 12:32:04,935 p=24737 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:32:04,942 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ******************************************************************************************************************************
+2023-10-17 12:32:05,584 p=24737 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:32:05,588 p=24737 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ************************************************************************************************************************************
+2023-10-17 12:32:06,287 p=24737 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:32:06,303 p=24737 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:32:06,303 p=24737 u=matthew n=ansible | 192.168.56.10              : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:33:05,544 p=25083 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:33:05,544 p=25083 u=matthew n=ansible | 192.168.56.10 | CHANGED | rc=0 >>
+ilikepineappleverymuch123
+
+2023-10-17 12:34:25,574 p=25177 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:34:25,575 p=25177 u=matthew n=ansible | 192.168.56.10 | CHANGED | rc=0 >>
+ilikepineappleverymuch123
+
+2023-10-17 12:34:51,562 p=25258 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:34:51,570 p=25258 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:34:52,547 p=25258 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:34:52,547 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:34:52,555 p=25258 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:34:54,696 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:34:54,704 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ***************************************************************************************************************************
+2023-10-17 12:34:56,746 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:34:56,750 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *******************************************************************************************************************************
+2023-10-17 12:34:57,651 p=25258 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:34:57,656 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *********************************************************************************************************************************************
+2023-10-17 12:34:59,938 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:34:59,942 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***********************************************************************************************************************************************
+2023-10-17 12:35:00,449 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:00,453 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ****************************************************************************************************************************************
+2023-10-17 12:35:00,798 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:00,802 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *****************************************************************************************************************************************
+2023-10-17 12:35:01,177 p=25258 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:01,181 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ******************************************************************************************************************************
+2023-10-17 12:35:01,830 p=25258 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:35:01,834 p=25258 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ************************************************************************************************************************************
+2023-10-17 12:35:02,511 p=25258 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:35:02,527 p=25258 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:35:02,528 p=25258 u=matthew n=ansible | 192.168.56.10              : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:35:05,129 p=25422 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:35:05,129 p=25422 u=matthew n=ansible | 192.168.56.10 | CHANGED | rc=0 >>
+ilikeorangesverymuch123
+
+2023-10-17 12:35:43,643 p=25513 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:35:43,644 p=25513 u=matthew n=ansible | 192.168.56.10 | CHANGED | rc=0 >>
+ilikeorangesverymuch123
+
+2023-10-17 12:35:46,137 p=25542 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:35:46,144 p=25542 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:35:47,367 p=25542 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:35:47,367 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:47,376 p=25542 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:35:49,443 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:49,452 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ***************************************************************************************************************************
+2023-10-17 12:35:51,419 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:51,424 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *******************************************************************************************************************************
+2023-10-17 12:35:52,396 p=25542 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:35:52,401 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *********************************************************************************************************************************************
+2023-10-17 12:35:54,670 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:54,675 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***********************************************************************************************************************************************
+2023-10-17 12:35:55,177 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:55,183 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ****************************************************************************************************************************************
+2023-10-17 12:35:55,520 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:55,525 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *****************************************************************************************************************************************
+2023-10-17 12:35:55,901 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:55,906 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ******************************************************************************************************************************
+2023-10-17 12:35:56,504 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:56,509 p=25542 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ************************************************************************************************************************************
+2023-10-17 12:35:57,010 p=25542 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:35:57,024 p=25542 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:35:57,024 p=25542 u=matthew n=ansible | 192.168.56.10              : ok=10   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:39:26,882 p=25896 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:39:26,889 p=25896 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:39:27,967 p=25896 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:39:27,967 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:27,980 p=25896 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:39:30,105 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:30,111 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ***************************************************************************************************************************
+2023-10-17 12:39:32,066 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:32,071 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *******************************************************************************************************************************
+2023-10-17 12:39:33,975 p=25896 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:39:33,980 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *********************************************************************************************************************************************
+2023-10-17 12:39:36,032 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:36,035 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***********************************************************************************************************************************************
+2023-10-17 12:39:36,586 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:36,590 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ****************************************************************************************************************************************
+2023-10-17 12:39:36,937 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:36,941 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *****************************************************************************************************************************************
+2023-10-17 12:39:37,329 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:37,333 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ******************************************************************************************************************************
+2023-10-17 12:39:37,946 p=25896 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:39:37,951 p=25896 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ************************************************************************************************************************************
+2023-10-17 12:39:38,642 p=25896 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:39:38,655 p=25896 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:39:38,655 p=25896 u=matthew n=ansible | 192.168.56.10              : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:42:55,621 p=26353 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:42:55,628 p=26353 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:42:56,983 p=26353 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:42:56,983 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:42:56,991 p=26353 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:42:59,086 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:42:59,094 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ***************************************************************************************************************************
+2023-10-17 12:43:01,041 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:43:01,046 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *******************************************************************************************************************************
+2023-10-17 12:43:02,007 p=26353 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:43:02,012 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *********************************************************************************************************************************************
+2023-10-17 12:43:04,119 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:43:04,123 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***********************************************************************************************************************************************
+2023-10-17 12:43:04,622 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:43:04,626 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ****************************************************************************************************************************************
+2023-10-17 12:43:04,984 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:43:04,988 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *****************************************************************************************************************************************
+2023-10-17 12:43:05,371 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:43:05,375 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ******************************************************************************************************************************
+2023-10-17 12:43:05,975 p=26353 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:43:05,978 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ***************************************************************************************************************************************
+2023-10-17 12:43:06,423 p=26353 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:43:06,427 p=26353 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ************************************************************************************************************************************
+2023-10-17 12:43:07,099 p=26353 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:43:07,116 p=26353 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:43:07,116 p=26353 u=matthew n=ansible | 192.168.56.10              : ok=11   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:51:36,568 p=26873 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:51:36,576 p=26873 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:51:37,749 p=26873 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:51:37,749 p=26873 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:51:37,762 p=26873 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:51:39,949 p=26873 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:51:39,952 p=26873 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 12:51:40,467 p=26873 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "firewall is not currently running, unable to perform immediate actions without a running firewall daemon"}
+2023-10-17 12:51:40,468 p=26873 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:51:40,468 p=26873 u=matthew n=ansible | 192.168.56.10              : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 12:52:05,146 p=26954 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 12:52:05,153 p=26954 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 12:52:06,216 p=26954 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 12:52:06,216 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:06,228 p=26954 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 12:52:08,361 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:08,369 p=26954 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 12:52:09,187 p=26954 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:52:09,190 p=26954 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 12:52:09,770 p=26954 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:52:09,775 p=26954 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 12:52:10,201 p=26954 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:52:10,205 p=26954 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 12:52:10,863 p=26954 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:52:10,872 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ***************************************************************************************************************************
+2023-10-17 12:52:12,865 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:12,870 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] *******************************************************************************************************************************
+2023-10-17 12:52:13,730 p=26954 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 12:52:13,734 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] *********************************************************************************************************************************************
+2023-10-17 12:52:16,018 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:16,022 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ***********************************************************************************************************************************************
+2023-10-17 12:52:16,400 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:16,412 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] ****************************************************************************************************************************************
+2023-10-17 12:52:16,756 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:16,761 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] *****************************************************************************************************************************************
+2023-10-17 12:52:17,168 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:17,172 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ******************************************************************************************************************************
+2023-10-17 12:52:17,766 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:17,771 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ***************************************************************************************************************************************
+2023-10-17 12:52:18,226 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:18,231 p=26954 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] ************************************************************************************************************************************
+2023-10-17 12:52:18,762 p=26954 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 12:52:18,777 p=26954 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 12:52:18,777 p=26954 u=matthew n=ansible | 192.168.56.10              : ok=15   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 14:17:39,164 p=28319 u=matthew n=ansible | ERROR! couldn't resolve module/action 'ansiansible.builtin.file'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/tasks/configure-traefik.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Use Traefik config presets
+  ^ here
+
+2023-10-17 14:18:14,490 p=28380 u=matthew n=ansible | ERROR! couldn't resolve module/action 'ansiansible.builtin.template'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/tasks/configure-traefik.yml': line 6, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Use Traefik config presets
+  ^ here
+
+2023-10-17 14:18:34,202 p=28413 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 14:18:34,208 p=28413 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 14:18:35,368 p=28413 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 14:18:35,368 p=28413 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:35,380 p=28413 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 14:18:37,508 p=28413 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:37,512 p=28413 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 14:18:38,007 p=28413 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:38,011 p=28413 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 14:18:38,475 p=28413 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:38,479 p=28413 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 14:18:38,907 p=28413 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:38,911 p=28413 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 14:18:39,560 p=28413 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:18:39,567 p=28413 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] ****************************************************************************************************************************
+2023-10-17 14:18:39,914 p=28413 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:18:39,919 p=28413 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] *********************************************************************************************************************************
+2023-10-17 14:18:40,000 p=28413 u=matthew n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2023-10-17 14:18:40,001 p=28413 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "Could not find or access 'templates/traefik.yml.js'\nSearched in:\n\t/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/templates/templates/traefik.yml.js\n\t/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/templates/traefik.yml.js\n\t/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/tasks/templates/templates/traefik.yml.js\n\t/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/tasks/templates/traefik.yml.js\n\t/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/templates/templates/traefik.yml.js\n\t/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/templates/traefik.yml.js on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-10-17 14:18:40,001 p=28413 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 14:18:40,001 p=28413 u=matthew n=ansible | 192.168.56.10              : ok=7    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 14:18:49,266 p=28544 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 14:18:49,272 p=28544 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 14:18:50,308 p=28544 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 14:18:50,308 p=28544 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:50,321 p=28544 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 14:18:52,473 p=28544 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:52,477 p=28544 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 14:18:52,977 p=28544 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:52,981 p=28544 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 14:18:53,452 p=28544 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:53,456 p=28544 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 14:18:53,861 p=28544 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:53,865 p=28544 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 14:18:54,488 p=28544 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:18:54,495 p=28544 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] ****************************************************************************************************************************
+2023-10-17 14:18:54,829 p=28544 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:18:54,833 p=28544 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] *********************************************************************************************************************************
+2023-10-17 14:18:55,484 p=28544 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:18:55,502 p=28544 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 14:18:55,502 p=28544 u=matthew n=ansible | 192.168.56.10              : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 14:27:18,489 p=29165 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 14:27:18,495 p=29165 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 14:27:19,606 p=29165 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 14:27:19,606 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:19,618 p=29165 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 14:27:21,749 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:21,753 p=29165 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 14:27:22,285 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:22,289 p=29165 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 14:27:22,790 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:22,794 p=29165 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 14:27:23,198 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:23,203 p=29165 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 14:27:23,836 p=29165 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:27:23,844 p=29165 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] ****************************************************************************************************************************
+2023-10-17 14:27:24,187 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:24,191 p=29165 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] *********************************************************************************************************************************
+2023-10-17 14:27:24,718 p=29165 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:27:24,723 p=29165 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] **************************************************************************************************************************************
+2023-10-17 14:27:25,237 p=29165 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "Parameter error: network named traefik_network could not be found. Does it exist?"}
+2023-10-17 14:27:25,237 p=29165 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 14:27:25,238 p=29165 u=matthew n=ansible | 192.168.56.10              : ok=8    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 14:28:29,629 p=29432 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 14:28:29,636 p=29432 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 14:28:30,762 p=29432 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 14:28:30,762 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:30,775 p=29432 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 14:28:32,863 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:32,868 p=29432 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 14:28:33,388 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:33,393 p=29432 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 14:28:33,864 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:33,869 p=29432 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 14:28:34,274 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:34,279 p=29432 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 14:28:34,915 p=29432 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:28:34,924 p=29432 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] ****************************************************************************************************************************
+2023-10-17 14:28:35,264 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:35,270 p=29432 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] *********************************************************************************************************************************
+2023-10-17 14:28:35,805 p=29432 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:28:35,810 p=29432 u=matthew n=ansible | TASK [install-configure-portainer : Create docker network] **************************************************************************************************************************************
+2023-10-17 14:28:36,267 p=29432 u=matthew n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was:  (exit status 1))")
+2023-10-17 14:28:36,267 p=29432 u=matthew n=ansible | fatal: [192.168.56.10]: FAILED! => {"changed": false, "msg": "An unexpected Docker error occurred: 500 Server Error for http+docker://localhost/v1.43/networks/create: Internal Server Error (\"Failed to Setup IP tables: Unable to enable SKIP DNAT rule:  (iptables failed: iptables --wait -t nat -I DOCKER -i br-c978caaa704c -j RETURN: iptables: No chain/target/match by that name.\n (exit status 1))\")"}
+2023-10-17 14:28:36,268 p=29432 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 14:28:36,268 p=29432 u=matthew n=ansible | 192.168.56.10              : ok=8    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-17 14:30:14,932 p=29767 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 14:30:14,938 p=29767 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 14:30:16,130 p=29767 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 14:30:16,130 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:16,146 p=29767 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 14:30:18,324 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:18,330 p=29767 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 14:30:18,822 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:18,827 p=29767 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 14:30:19,292 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:19,297 p=29767 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 14:30:19,697 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:19,703 p=29767 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 14:30:20,354 p=29767 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:30:20,364 p=29767 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] ****************************************************************************************************************************
+2023-10-17 14:30:20,771 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:20,777 p=29767 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] *********************************************************************************************************************************
+2023-10-17 14:30:21,313 p=29767 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:30:21,318 p=29767 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] **************************************************************************************************************************************
+2023-10-17 14:30:27,467 p=29767 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:30:27,486 p=29767 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 14:30:27,486 p=29767 u=matthew n=ansible | 192.168.56.10              : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 14:31:16,948 p=30006 u=matthew n=ansible | PLAY [all] **************************************************************************************************************************************************************************************
+2023-10-17 14:31:16,954 p=30006 u=matthew n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************
+2023-10-17 14:31:17,954 p=30006 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter could change
+the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 14:31:17,954 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:17,970 p=30006 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ***********************************************************************************************************************************************
+2023-10-17 14:31:20,122 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:20,127 p=30006 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] *******************************************************************************************************************************
+2023-10-17 14:31:20,627 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:20,632 p=30006 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] **********************************************************************************************************************************
+2023-10-17 14:31:21,105 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:21,110 p=30006 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ******************************************************************************************************************************************
+2023-10-17 14:31:21,509 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:21,514 p=30006 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] *************************************************************************************************************************************
+2023-10-17 14:31:22,161 p=30006 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:31:22,170 p=30006 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] ****************************************************************************************************************************
+2023-10-17 14:31:22,565 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:22,570 p=30006 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] *********************************************************************************************************************************
+2023-10-17 14:31:23,105 p=30006 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 14:31:23,109 p=30006 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] **************************************************************************************************************************************
+2023-10-17 14:31:24,011 p=30006 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 14:31:24,032 p=30006 u=matthew n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************
+2023-10-17 14:31:24,032 p=30006 u=matthew n=ansible | 192.168.56.10              : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 15:53:24,747 p=33375 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 15:53:24,756 p=33375 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 15:53:24,861 p=33375 u=matthew n=ansible | fatal: [192.168.56.10]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: vagrant@192.168.56.10: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2023-10-17 15:53:24,862 p=33375 u=matthew n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2023-10-17 15:53:24,862 p=33375 u=matthew n=ansible | 192.168.56.10              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 15:54:04,927 p=33546 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 15:54:04,937 p=33546 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 15:54:06,441 p=33546 u=matthew n=ansible | [WARNING]: Platform linux on host 192.168.56.10 is using the discovered Python interpreter at /usr/libexec/platform-python, but future installation of another Python interpreter
+could change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 15:54:06,441 p=33546 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 15:54:06,452 p=33546 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ********************************************************************************************************************************
+2023-10-17 15:57:10,578 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:10,582 p=33546 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] ****************************************************************************************************************
+2023-10-17 15:57:11,431 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:11,434 p=33546 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] *******************************************************************************************************************
+2023-10-17 15:57:12,031 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:12,036 p=33546 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ***************************************************************************************************************************
+2023-10-17 15:57:12,445 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:12,449 p=33546 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] **********************************************************************************************************************
+2023-10-17 15:57:13,056 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:13,065 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ************************************************************************************************************
+2023-10-17 15:57:16,638 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:16,641 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ****************************************************************************************************************
+2023-10-17 15:57:17,561 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:57:17,566 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ******************************************************************************************************************************
+2023-10-17 15:58:00,465 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:00,469 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ********************************************************************************************************************************
+2023-10-17 15:58:01,651 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:01,655 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] *************************************************************************************************************************
+2023-10-17 15:58:01,990 p=33546 u=matthew n=ansible | ok: [192.168.56.10]
+2023-10-17 15:58:01,994 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] **************************************************************************************************************************
+2023-10-17 15:58:02,395 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:02,399 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ***************************************************************************************************************
+2023-10-17 15:58:03,047 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:03,053 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ************************************************************************************************************************
+2023-10-17 15:58:03,492 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:03,496 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Create docker network] ***********************************************************************************************************************
+2023-10-17 15:58:04,114 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:04,118 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] *********************************************************************************************************************
+2023-10-17 15:58:15,961 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:15,964 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] *************************************************************************************************************
+2023-10-17 15:58:16,307 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:16,312 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] ******************************************************************************************************************
+2023-10-17 15:58:16,809 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:16,814 p=33546 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] ***********************************************************************************************************************
+2023-10-17 15:58:22,779 p=33546 u=matthew n=ansible | changed: [192.168.56.10]
+2023-10-17 15:58:22,792 p=33546 u=matthew n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2023-10-17 15:58:22,792 p=33546 u=matthew n=ansible | 192.168.56.10              : ok=19   changed=17   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 17:24:22,194 p=37124 u=matthew n=ansible | [WARNING]: Platform linux on host 129.146.0.218 is using the discovered Python interpreter at /usr/bin/python3.6, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 17:24:22,194 p=37124 u=matthew n=ansible | 129.146.0.218 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.6"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2023-10-17 17:25:39,771 p=37259 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 17:25:39,780 p=37259 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 17:25:43,477 p=37259 u=matthew n=ansible | [WARNING]: Platform linux on host 129.146.0.218 is using the discovered Python interpreter at /usr/bin/python3.6, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 17:25:43,477 p=37259 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:25:43,487 p=37259 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ********************************************************************************************************************************
+2023-10-17 17:31:56,655 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:31:56,660 p=37259 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] ****************************************************************************************************************
+2023-10-17 17:31:58,739 p=37259 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:31:58,744 p=37259 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] *******************************************************************************************************************
+2023-10-17 17:32:00,715 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:32:00,719 p=37259 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ***************************************************************************************************************************
+2023-10-17 17:32:02,638 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:32:02,642 p=37259 u=matthew n=ansible | TASK [configure-system : Permit traffic for http] ********************************************************************************************************************************
+2023-10-17 17:32:04,507 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:32:04,512 p=37259 u=matthew n=ansible | TASK [configure-system : Permit traffic for https] *******************************************************************************************************************************
+2023-10-17 17:32:06,326 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:32:06,331 p=37259 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] **********************************************************************************************************************
+2023-10-17 17:32:08,965 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:32:08,974 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ************************************************************************************************************
+2023-10-17 17:32:13,713 p=37259 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:32:13,718 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ****************************************************************************************************************
+2023-10-17 17:32:15,949 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:32:15,953 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ******************************************************************************************************************************
+2023-10-17 17:33:54,442 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:33:54,448 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ********************************************************************************************************************************
+2023-10-17 17:33:58,149 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:33:58,154 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] *************************************************************************************************************************
+2023-10-17 17:33:59,772 p=37259 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:33:59,778 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] **************************************************************************************************************************
+2023-10-17 17:34:01,450 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:01,455 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ***************************************************************************************************************
+2023-10-17 17:34:04,632 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:04,637 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ************************************************************************************************************************
+2023-10-17 17:34:06,376 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:06,380 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Create docker network] ***********************************************************************************************************************
+2023-10-17 17:34:08,430 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:08,434 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] *********************************************************************************************************************
+2023-10-17 17:34:18,639 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:18,644 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] *************************************************************************************************************
+2023-10-17 17:34:20,236 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:20,241 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] ******************************************************************************************************************
+2023-10-17 17:34:23,289 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:23,294 p=37259 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] ***********************************************************************************************************************
+2023-10-17 17:34:28,539 p=37259 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:34:28,559 p=37259 u=matthew n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2023-10-17 17:34:28,559 p=37259 u=matthew n=ansible | 129.146.0.218              : ok=21   changed=17   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 17:49:34,022 p=39060 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 17:49:34,031 p=39060 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 17:49:37,746 p=39060 u=matthew n=ansible | [WARNING]: Platform linux on host 129.146.0.218 is using the discovered Python interpreter at /usr/bin/python3.6, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 17:49:37,746 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:37,762 p=39060 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ********************************************************************************************************************************
+2023-10-17 17:49:42,729 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:42,735 p=39060 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] ****************************************************************************************************************
+2023-10-17 17:49:44,687 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:44,692 p=39060 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] *******************************************************************************************************************
+2023-10-17 17:49:46,473 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:46,478 p=39060 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ***************************************************************************************************************************
+2023-10-17 17:49:48,138 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:48,143 p=39060 u=matthew n=ansible | TASK [configure-system : Permit traffic for http] ********************************************************************************************************************************
+2023-10-17 17:49:50,172 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:50,176 p=39060 u=matthew n=ansible | TASK [configure-system : Permit traffic for https] *******************************************************************************************************************************
+2023-10-17 17:49:51,844 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:51,848 p=39060 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] **********************************************************************************************************************
+2023-10-17 17:49:53,961 p=39060 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:49:53,969 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ************************************************************************************************************
+2023-10-17 17:49:58,742 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:49:58,747 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ****************************************************************************************************************
+2023-10-17 17:50:00,743 p=39060 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:50:00,748 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ******************************************************************************************************************************
+2023-10-17 17:50:05,455 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:05,460 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ********************************************************************************************************************************
+2023-10-17 17:50:07,247 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:07,252 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] *************************************************************************************************************************
+2023-10-17 17:50:08,818 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:08,824 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] **************************************************************************************************************************
+2023-10-17 17:50:10,429 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:10,433 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ***************************************************************************************************************
+2023-10-17 17:50:13,082 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:13,088 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ************************************************************************************************************************
+2023-10-17 17:50:14,899 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:14,905 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Create docker network] ***********************************************************************************************************************
+2023-10-17 17:50:17,000 p=39060 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:50:17,006 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] *********************************************************************************************************************
+2023-10-17 17:50:18,883 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:18,887 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] *************************************************************************************************************
+2023-10-17 17:50:20,397 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:20,401 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] ******************************************************************************************************************
+2023-10-17 17:50:22,863 p=39060 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:50:22,867 p=39060 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] ***********************************************************************************************************************
+2023-10-17 17:50:25,042 p=39060 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:50:25,061 p=39060 u=matthew n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2023-10-17 17:50:25,061 p=39060 u=matthew n=ansible | 129.146.0.218              : ok=21   changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 17:53:08,249 p=39691 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 17:53:08,258 p=39691 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 17:53:11,867 p=39691 u=matthew n=ansible | [WARNING]: Platform linux on host 129.146.0.218 is using the discovered Python interpreter at /usr/bin/python3.6, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 17:53:11,867 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:11,881 p=39691 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ********************************************************************************************************************************
+2023-10-17 17:53:16,580 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:16,585 p=39691 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] ****************************************************************************************************************
+2023-10-17 17:53:18,530 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:18,535 p=39691 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] *******************************************************************************************************************
+2023-10-17 17:53:20,308 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:20,312 p=39691 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ***************************************************************************************************************************
+2023-10-17 17:53:21,993 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:21,998 p=39691 u=matthew n=ansible | TASK [configure-system : Permit traffic for http] ********************************************************************************************************************************
+2023-10-17 17:53:23,926 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:23,930 p=39691 u=matthew n=ansible | TASK [configure-system : Permit traffic for https] *******************************************************************************************************************************
+2023-10-17 17:53:25,826 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:25,832 p=39691 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] **********************************************************************************************************************
+2023-10-17 17:53:27,904 p=39691 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:53:27,911 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ************************************************************************************************************
+2023-10-17 17:53:32,360 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:32,366 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ****************************************************************************************************************
+2023-10-17 17:53:34,360 p=39691 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:53:34,366 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ******************************************************************************************************************************
+2023-10-17 17:53:39,188 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:39,194 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ********************************************************************************************************************************
+2023-10-17 17:53:41,008 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:41,013 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] *************************************************************************************************************************
+2023-10-17 17:53:42,598 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:42,604 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] **************************************************************************************************************************
+2023-10-17 17:53:44,197 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:44,202 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ***************************************************************************************************************
+2023-10-17 17:53:46,865 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:46,870 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ************************************************************************************************************************
+2023-10-17 17:53:48,925 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:48,929 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Create docker network] ***********************************************************************************************************************
+2023-10-17 17:53:50,672 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:50,677 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] *********************************************************************************************************************
+2023-10-17 17:53:52,544 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:52,549 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] *************************************************************************************************************
+2023-10-17 17:53:54,020 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:54,026 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] ******************************************************************************************************************
+2023-10-17 17:53:56,626 p=39691 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 17:53:56,631 p=39691 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] ***********************************************************************************************************************
+2023-10-17 17:53:59,227 p=39691 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 17:53:59,242 p=39691 u=matthew n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2023-10-17 17:53:59,243 p=39691 u=matthew n=ansible | 129.146.0.218              : ok=21   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-17 18:01:35,024 p=40415 u=matthew n=ansible | ERROR! no module/action detected in task.
+
+The error appears to be in '/home/matthew/Desktop/development/devops/vagrant/traefik/ansible/roles/install-configure-portainer/tasks/main.yml': line 12, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Deploy dummy
+  ^ here
+
+2023-10-17 18:02:04,367 p=40462 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 18:02:04,377 p=40462 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 18:02:08,108 p=40462 u=matthew n=ansible | [WARNING]: Platform linux on host 129.146.0.218 is using the discovered Python interpreter at /usr/bin/python3.6, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 18:02:08,108 p=40462 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:08,123 p=40462 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ********************************************************************************************************************************
+2023-10-17 18:02:12,849 p=40462 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:12,854 p=40462 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] ****************************************************************************************************************
+2023-10-17 18:02:13,682 p=40462 u=matthew n=ansible |  [ERROR]: User interrupted execution
+
+2023-10-17 18:02:20,278 p=40554 u=matthew n=ansible | PLAY [all] ***********************************************************************************************************************************************************************
+2023-10-17 18:02:20,288 p=40554 u=matthew n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************
+2023-10-17 18:02:23,340 p=40554 u=matthew n=ansible | [WARNING]: Platform linux on host 129.146.0.218 is using the discovered Python interpreter at /usr/bin/python3.6, but future installation of another Python interpreter could
+change the meaning of that path. See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-10-17 18:02:23,340 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:23,350 p=40554 u=matthew n=ansible | TASK [configure-system : Update all yum packages] ********************************************************************************************************************************
+2023-10-17 18:02:28,150 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:28,155 p=40554 u=matthew n=ansible | TASK [configure-system : Ensure the firewalld service is running] ****************************************************************************************************************
+2023-10-17 18:02:30,067 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:30,072 p=40554 u=matthew n=ansible | TASK [configure-system : Permit traffic for traefik dashboard] *******************************************************************************************************************
+2023-10-17 18:02:31,822 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:31,827 p=40554 u=matthew n=ansible | TASK [configure-system : Permit traffic for portianer] ***************************************************************************************************************************
+2023-10-17 18:02:33,527 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:33,532 p=40554 u=matthew n=ansible | TASK [configure-system : Permit traffic for http] ********************************************************************************************************************************
+2023-10-17 18:02:35,436 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:35,441 p=40554 u=matthew n=ansible | TASK [configure-system : Permit traffic for https] *******************************************************************************************************************************
+2023-10-17 18:02:37,140 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:37,145 p=40554 u=matthew n=ansible | TASK [configure-system : Reload firewalld to apply changes] **********************************************************************************************************************
+2023-10-17 18:02:39,198 p=40554 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 18:02:39,206 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Install required deps for docker] ************************************************************************************************************
+2023-10-17 18:02:43,682 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:43,688 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Add Docker repository to Yum] ****************************************************************************************************************
+2023-10-17 18:02:45,730 p=40554 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 18:02:45,734 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Install docker] ******************************************************************************************************************************
+2023-10-17 18:02:50,876 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:50,881 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Start docker] ********************************************************************************************************************************
+2023-10-17 18:02:52,658 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:52,664 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Create docker group] *************************************************************************************************************************
+2023-10-17 18:02:54,190 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:54,195 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Add user to docker] **************************************************************************************************************************
+2023-10-17 18:02:55,795 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:55,800 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Create tmp Portainer Password] ***************************************************************************************************************
+2023-10-17 18:02:58,428 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:02:58,434 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Create docker volume] ************************************************************************************************************************
+2023-10-17 18:03:00,121 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:03:00,127 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Create docker network] ***********************************************************************************************************************
+2023-10-17 18:03:02,398 p=40554 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 18:03:02,403 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Run Portainer Container] *********************************************************************************************************************
+2023-10-17 18:03:04,259 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:03:04,265 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Create Traefik folder for certs] *************************************************************************************************************
+2023-10-17 18:03:06,005 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:03:06,011 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Use Traefik config presets] ******************************************************************************************************************
+2023-10-17 18:03:08,697 p=40554 u=matthew n=ansible | ok: [129.146.0.218]
+2023-10-17 18:03:08,703 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Run Traefik Container] ***********************************************************************************************************************
+2023-10-17 18:03:10,887 p=40554 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 18:03:10,892 p=40554 u=matthew n=ansible | TASK [install-configure-portainer : Deploy dummy app] ****************************************************************************************************************************
+2023-10-17 18:03:13,175 p=40554 u=matthew n=ansible | changed: [129.146.0.218]
+2023-10-17 18:03:13,189 p=40554 u=matthew n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************
+2023-10-17 18:03:13,189 p=40554 u=matthew n=ansible | 129.146.0.218              : ok=22   changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

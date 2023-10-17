@@ -1,0 +1,26 @@
+- name: Create tmp Portainer Password
+  copy:
+    content: "{{ portainer_password }}"
+    dest: /tmp/portainer_password
+
+- name: Create docker volume
+  docker_volume:
+    name: portainer_data
+
+- name: Create docker network
+  docker_network:
+    name: traefik_network
+
+- name: Run Portainer Container
+  docker_container:
+    name: portainer
+    image: portainer/portainer
+    state: started
+    restart_policy: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "portainer_data:/data"
+      - "/tmp/portainer_password:/tmp/portainer_password"
+    command: ["--admin-password-file", "/tmp/portainer_password"]

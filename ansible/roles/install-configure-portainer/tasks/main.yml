@@ -1,0 +1,15 @@
+---
+# tasks file for install-configure-portainer 
+- name: Install docker
+  import_tasks: install-docker.yml
+
+- name: Install Portainer
+  import_tasks: install-portainer.yml
+
+- name: Configure Traefik
+  import_tasks: configure-traefik.yml
+
+- name: Deploy dummy
+  import_tasks: deploy-dummy.yml
+  when:
+    - deploy_dummy is true

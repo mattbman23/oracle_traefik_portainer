@@ -4,6 +4,8 @@
     - configure-system
     - install-configure-portainer
   vars:
-    portainer_password: ilikeorangesverymuch123
+    portainer_version: "portainer/portainer-ce:2.19.4"
+    portainer_password: openshiftisfun
     user_email: matthew@gmail.com
+    deploy_watchtower: true
     deploy_dummy: true

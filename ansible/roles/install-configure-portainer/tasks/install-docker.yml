@@ -2,7 +2,7 @@
   ansible.builtin.yum:
     name: yum-utils
     state: present
-  
+
 - name: Add Docker repository to Yum
   ansible.builtin.command: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
@@ -10,11 +10,11 @@
   ansible.builtin.yum:
     name: "{{ packages }}"
     state: present
-  vars: 
+  vars:
     packages:
-    - docker-ce
-    - docker-ce-cli
-    - containerd.io
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
 
 - name: Start docker
   ansible.builtin.systemd:
@@ -25,12 +25,12 @@
 - name: Allow docker to be ran as non-root
   block:
     - name: Create docker group
-      group:
+      ansible.builtin.group:
         name: docker
         state: present
-    
+
     - name: Add user to docker
-      user:
+      ansible.builtin.user:
         name: "{{ ansible_user }}"
         groups: docker
-        append: true 
+        append: true

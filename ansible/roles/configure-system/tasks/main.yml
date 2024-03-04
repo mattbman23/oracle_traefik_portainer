@@ -1,34 +1,34 @@
 ---
-# tasks file for configure-system 
+# tasks file for configure-system
 - name: Update all yum packages
   ansible.builtin.yum:
     name: "*"
     state: latest
 
 - name: Ensure the firewalld service is running
-  service:
+  ansible.builtin.service:
     name: firewalld
     state: started
     enabled: yes
 
 - name: Permit traffic for traefik dashboard
-  firewalld: 
+  ansible.posix.firewalld:
     port: 8080/tcp
     permanent: yes
     state: enabled
     immediate: yes
-    zone: public 
-  
+    zone: public
+
 - name: Permit traffic for portianer
-  firewalld: 
+  ansible.posix.firewalld:
     port: "9000/tcp"
     permanent: yes
     state: enabled
     immediate: yes
     zone: public
-  
+
 - name: Permit traffic for http
-  firewalld: 
+  ansible.posix.firewalld:
     port: "80/tcp"
     permanent: yes
     state: enabled
@@ -36,7 +36,7 @@
     zone: public
 
 - name: Permit traffic for https
-  firewalld: 
+  ansible.posix.firewalld:
     port: "443/tcp"
     permanent: yes
     state: enabled
@@ -44,4 +44,6 @@
     zone: public
 
 - name: Reload firewalld to apply changes
-  command: firewall-cmd --reload
+  ansible.builtin.service:
+    name: firewalld
+    state: reloaded

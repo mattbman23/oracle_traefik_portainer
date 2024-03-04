@@ -1,0 +1,33 @@
+- name: Create folder to store portainer password
+  ansible.builtin.file:
+    path: /etc/portainercfg
+    state: "directory"
+
+- name: Create tmp Portainer Password
+  ansible.builtin.copy:
+    dest: /etc/portainercfg/portainer_password
+    content: "{{ portainer_password }}"
+
+- name: Create docker volume
+  docker_volume:
+    name: portainer_data
+
+- name: Create docker network
+  docker_network:
+    name: traefik_network
+
+- name: Run Portainer Container
+  docker_container:
+    name: portainer
+    image: "{{ portainer_version }}"
+    state: started
+    restart_policy: always
+    ports:
+      - "9000:9000"
+    labels:
+      com.centurylinklabs.watchtower.enable: "false"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "portainer_data:/data"
+      - "/etc/portainercfg/portainer_password:/tmp/portainer_password"
+    command: ["--admin-password-file", "/tmp/portainer_password"]

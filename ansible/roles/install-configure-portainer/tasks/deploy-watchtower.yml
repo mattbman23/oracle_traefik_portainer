@@ -1,0 +1,9 @@
+- name: Deploy Watchtower
+  docker_container:
+    name: watchtower
+    image: containrrr/watchtower
+    state: started
+    labels:
+      com.centurylinklabs.watchtower.enable: "false"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"

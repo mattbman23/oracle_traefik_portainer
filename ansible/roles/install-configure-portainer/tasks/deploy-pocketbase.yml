@@ -1,0 +1,24 @@
+- name: Create pocketbase volume
+  docker_volume:
+    name: pocketbase_data
+    state: present
+    recreate: always
+  tags: deploy_pocketbase
+
+- name: Deploy pocketbase
+  docker_container:
+    name: pocketbase
+    image: ghcr.io/muchobien/pocketbase:latest
+    state: started
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.pocketbase.entrypoints: "web, websecure"
+      traefik.http.routers.pocketbase.rule: "Host(`pocketbase.{{ inventory_hostname }}`)"
+      traefik.http.routers.pocketbase.tls: "true"
+      traefik.http.routers.pocketbase.tls.certresolver: "production"
+      traefik.http.services.pocketbase.loadbalancer.server.port: "8090"
+    volumes:
+      - "pocketbase_data:/pb_data"
+    networks:
+      - name: traefik_network
+  tags: deploy_pocketbase

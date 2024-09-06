@@ -1,6 +1,6 @@
 ---
 # tasks file for install-configure-portainer
-- name: Install docker
+- name: Install Docker
   import_tasks: install-docker.yml
 
 - name: Deploy Portainer
@@ -14,7 +14,7 @@
   when:
     - deploy_watchtower is true
 
-- name: Deploy Dummy App
-  import_tasks: deploy-dummy.yml
+- name: Deploy Pocketbase
+  import_tasks: deploy-pocketbase.yml
   when:
-    - deploy_dummy is true
+    - deploy_pocketbase is true

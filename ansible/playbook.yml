@@ -9,6 +9,6 @@
     traefik_password: openshiftisfun
     portainer_version: portainer/portainer-ce:2.19.4
     portainer_password: openshiftisfun
-    user_email: matthewbnw@gmail.com
+    user_email: <your_email>
     deploy_watchtower: false
     deploy_pocketbase: true

@@ -13,22 +13,22 @@
     name: traefik
     image: "{{ traefik_image }}"
     state: started
+    restart_policy: unless-stopped
     ports:
       - "80:80"
       - "443:443"
     labels:
       com.centurylinklabs.watchtower.enable: "false"
       traefik.enable: "true"
-      traefik.http.routers.dashboard.entrypoints: "web, websecure"
-      traefik.http.routers.dashboard.tls: "true"
-      traefik.http.routers.dashboard.tls.certresolver: "production"
-      traefik.http.routers.dashboard.rule: "Host(`traefik.{{ inventory_hostname }}`)"
-      traefik.http.routers.dashboard.service: "api@internal"
-      traefik.http.routers.dashboard.middlewares: "auth"
-      traefik.http.middlewares.auth.basicauth.users: "{{ traefik_username }}:{{ traefik_password | b64encode }}"
+      traefik.http.routers.traefik.entrypoints: "web, websecure"
+      traefik.http.routers.traefik.tls: "true"
+      traefik.http.routers.traefik.tls.certresolver: "production"
+      traefik.http.routers.traefik.rule: "Host(`traefik.{{ inventory_hostname }}`)"
+      traefik.http.routers.traefik.service: "api@internal"
+      # traefik.http.routers.traefik.middlewares: "auth"
+      # traefik.http.middlewares.auth.basicauth.users: "{{ traefik_username }}:{{ traefik_password | b64encode }}"
     volumes:
       - "/etc/traefik:/etc/traefik"
-      - "traefik-ssl-certs:/ssl-certs"
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     networks:
       - name: traefik_network

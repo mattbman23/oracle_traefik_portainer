@@ -4,11 +4,11 @@
     - configure-system
     - install-configure-portainer
   vars:
-    traefik_image: traefik:v3.1
+    traefik_image: traefik:v3.4.0
     traefik_username: matthew
     traefik_password: openshiftisfun
-    portainer_version: portainer/portainer-ce:2.19.4
+    portainer_version: portainer/portainer-ce:2.27.6
     portainer_password: openshiftisfun
     user_email: <your_email>
     deploy_watchtower: false
-    deploy_pocketbase: true
+    deploy_pocketbase: false

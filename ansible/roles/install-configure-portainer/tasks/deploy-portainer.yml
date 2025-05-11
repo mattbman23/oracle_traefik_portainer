@@ -21,7 +21,7 @@
     name: portainer
     image: "{{ portainer_version }}"
     state: started
-    restart_policy: always
+    restart_policy: unless-stopped
     labels:
       com.centurylinklabs.watchtower.enable: "false"
       traefik.enable: "true"
